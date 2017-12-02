@@ -4,7 +4,7 @@
   "description": "A tool for generating the configuration necessary to deploy an Ethereum Smart Contract, with state, as part of a network's genesis file",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/stevejaxon/gignesthai/issues"
   },
-  "homepage": "https://github.com/stevejaxon/gignesthai#readme"
+  "homepage": "https://github.com/stevejaxon/gignesthai#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "string": "^3.3.3",
+    "web3-utils": "^1.0.0-beta.26"
+  }
 }
