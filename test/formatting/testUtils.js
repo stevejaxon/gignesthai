@@ -66,6 +66,21 @@ describe('Formatting Utils Tests', function() {
             assert.equal(outputKey, expectedKey, 'expected that the returned value would be correct');
         });
 
+        it('should return a correctly padded and hashed string key when given an address without prefix', function() {
+            // Setup
+            let inputData = "ea30250dd7263a4783c66463c236a2153d6b88b4";
+            let inputStorageIndex = 0;
+            let expectedKey = "0x1ba324babf1065cf08a7595ac1e628db8e2d81497ba1c96bd8424299bc108592";
+
+            // Test
+            let outputKey = utils.FormattingUtils.createArrayKey(inputData, inputStorageIndex);
+
+            // Verify
+            assert.isTrue(web3Utils.isAddress(inputData), 'expected that the input data would have been a valid address');
+            assert.typeOf(outputKey, 'string', 'expected that a string would be returned');
+            assert.equal(outputKey, expectedKey, 'expected that the returned value would be correct');
+        });
+
         // Edge cases and error handling
     });
 

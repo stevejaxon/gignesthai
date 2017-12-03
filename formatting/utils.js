@@ -19,7 +19,7 @@ exports.FormattingUtils = class {
             return null;
         }
         let key = this.padLeft(data) + this.padLeft(S(storageIndex).s);
-        return web3Utils.sha3(key);
+        return web3Utils.soliditySha3(key);
     }
 };
 
